@@ -1,0 +1,34 @@
+name: Update News
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # 每天9点更新一次
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Install Dependencies
+        run: |
+          pip install feedparser
+      
+      - name: Run News Scraper
+        run: |
+          python news_scraper.py
+      
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "your_email@example.com"
+          git config --global user.name "Your Name"
+          git add README.md
+          git commit -m "Update news content" || echo "No changes to commit"
+          git push
