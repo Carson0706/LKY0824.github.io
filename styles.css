@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5b8db8;
+    --secondary-color: #a1c4d0;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --header-background: #fff;
+    --footer-background: #fff;
+    --link-color: #5b8db8;
+    --link-hover-color: #3c6e91;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 13px;
+}
+
+header {
+    background-color: var(--header-background);
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0px;
+}
+
+.container {
+    width: 65%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+}
+
+.profile-info .chinese-name {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+.profile-info .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    color: var(--text-color);
+}
+
+.profile-info p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.profile-info .icon {
+    margin-right: 5px;
+}
+
+.profile-info a:not(.button) {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.profile-info a:not(.button):hover {
+    color: var(--link-hover-color);
+}
+
+.links {
+    margin-top: 12px;
+}
+
+.links a {
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 7px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--link-hover-color);
+    color: #fff;
+}
+
+.carousel-container {
+    width: 20%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    border: none;
+    user-select: none;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.prev {
+    left: 8px;
+}
+
+.next {
+    right: 8px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--link-hover-color);
+    color: #fff;
+}
+
+.intro {
+    background-color: #eef3f6;
+    color: var(--text-color);
+    padding: 25px 0;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.intro p {
+    font-size: 0.9rem;
+}
+
+.intro a {
+    color: var(--link-color);
+}
+
+.intro a:hover {
+    color: var(--link-hover-color);
+}
+
+main h2 {
+    font-size: 1.4rem;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+
+main h2:first-of-type {
+    margin-top: 40px;
+}
+
+.details h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.details p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.date {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #777;
+    display: block;
+}
+
+.education-item .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.courses {
+    margin-top: 10px;
+}
+
+.courses p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.experience-item,
+.project-item,
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.experience-item .date,
+.project-item .date,
+.activity-item .date {
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.details {
+    flex: 1;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.awards-list,
+.skills-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.awards-list li,
+.skills-list li {
+    position: relative;
+    padding-right: 120px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.awards-list .date {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+ul {
+    list-style-type: disc;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--footer-background);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 60px;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--link-hover-color);
+}
+
+footer p {
+    margin-bottom: 7px;
+}
+
+@media (max-width: 1080px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px 0;
+        margin-bottom: 25px;
+    }
+
+    .profile-info p {
+        font-size: 0.85rem;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .carousel-container {
+        width: 30%;
+        height: auto;
+        margin-top: 15px;
+        position: relative;
+    }
+
+    .carousel-image {
+        height: auto;
+    }
+
+    .prev,
+    .next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    main h2 {
+        font-size: 1.2rem;
+    }
+
+    .details h3 {
+        font-size: 1rem;
+    }
+
+    .details p {
+        font-size: 0.9rem;
+    }
+
+    .education-item,
+    .experience-item,
+    .project-item,
+    .activity-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
