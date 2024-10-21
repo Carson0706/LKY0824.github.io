@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANG LIU (刘洋)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="profile-info">
+                <h1>YANG LIU <span class="chinese-name">(刘洋)</span></h1>
+                <p class="subtitle"><b>🤖 Artificial Intelligence Student</b></p>
+                <p><span class="icon">📞</span> Tel: (+86) 18720898188</p>
+                <p><span class="icon">✉️</span> Email: <a href="mailto:1317937424@qq.com">1317937424@qq.com</a> &amp; <a href="mailto:yangliu35@ln.hk">yangliu35@ln.hk</a></p>
+                <p><span class="icon">💬</span> WeChat: 18720898188</p>
+                <div class="links">
+                    <a href="https://github.com/Carson0706" target="_blank" class="button">🐱 GitHub</a>
+                    <a href="resume.pdf" target="_blank" class="button">📄 PDF Resume</a>
+                    <a href="grade and ranking.pdf" target="_blank" class="button">🎓 Certificate of Grade Point and Rank</a>
+                    <a href="transcript.pdf" target="_blank" class="button">📝 Detailed Transcript</a>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <img src="photo2.jpg" class="carousel-image active" alt="YANG LIU Photo 1">
+                <img src="photo3.jpg" class="carousel-image" alt="YANG LIU Photo 2">
+                <img src="photo1.jpg" class="carousel-image" alt="YANG LIU Photo 3">
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-image');
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide += direction;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+    
+    <section class="intro">
+        <div class="container">
+            <p>
+                I am YANG LIU, a passionate and dedicated <a href="https://www.ln.edu.hk/cht/" target="_blank">lingnan University</a> I’m from jiangxi province. I graduated with a bachelor’s degree in ChengXian college,southeast university in 2022. My major is electrical engineering and automation.As an undergraduate,I not only participated in various competitions in the school,such as mathematical modeling competition and achieved good results,but also joined in  many social welfare projects and was recognized by school leaders and teachers.During my sophomore year,i also went to some substation companies for internship.The main job was to understand the operation and the operation of their equipment.In the year after graduation,I worked as an intern in the production technology department of the power supply branch in shicheng county,jiangxi province.The main responsibility is the management of power transmission and transformation.At the same time,I have been learning some examination knowledge of civil servants during these two years.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>🎓 Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="details">
+                            <h3>southeast University chenxian college</h3>
+                            <p>B.E. in elctircal engineering (<a href="http://jxys.cxxy.seu.edu.cn/">School of Mechanical and Electrical Engineering</a>)</p>
+                            <p class="date">09/2021 - 06/2025</p>
+                        </div>
+                        <div class="education-info">
+                            <p><strong>GPA:</strong> 3.33/4.5 (81.86/100)</p>
+                            <p><strong>Ranking:</strong> 36/129 (11/40 in class)</p>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <p><b>Key courses</b>: Modern System Analysis, Modern Circuits Theory, Power System Relay Protection, Power System Relay Protection, Power Electronic Technology, Theory of Automatic Control, Microcomputer: Principles and Application</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🔬 Research & Internship</h2>
+                <div class="experience-item">
+                    <div class="details">
+                        <h3>State Grid Jiangxi Electric Power Co., Ltd. Shicheng Power Supply Branch</h3>
+                        <p>Position: Project Planning and Cost Management</p>
+                        <p>Participated in the research on the utilization of clean energy</p>
+                        <p>Position: Power Transmission and Distribution Management</p>
+                        <p class="date">06/2022 - 09/2022</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>I gained friends and knowledge.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="details">
+                        <h3>Ganyu District Natural Resources and Planning Bureau</h3>
+                        <p>Conducted poverty alleviation research in areas of Ganyu District</p>
+                        <p class="date">06/2020 - 07/2020</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>I understand the importance of resources.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="details">
+                        <h3>Jiangsu Electric Power Research Institute</h3>
+                        <p>Responsible for travel planning and daily work records</p>
+                        <p>Learn professional skills and the operation and maintenance of automation equipment</p>
+                        <p class="date">06/2019 - 07/2019</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>I know how the business works.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>💻 Projects</h2>
+                <div class="project-item">
+                    <div class="details">
+                        <h3>Volunteer, Local Community Pandemic Prevention</h3>
+                        <p class="date">09/2022</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>GOOD.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="details">
+                        <h3>Volunteer, Nanjing Baixia High-tech Zone Innovation Week Special</h3>
+                        <p class="date">09/2019</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>GOOD.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="details">
+                        <h3>Volunteer, 2019 Asian Outdoor Festival, Pukou District, Nanjing</h3>
+                        <p class="date">05/2019</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>GOOD.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="details">
+                        <h3>Deputy Director of Organization Depart. of Youth League Committee</h3>
+                        <p class="date">01/2022</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>GOOD.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🛠️ Skills</h2>
+                <ul class="skills-list">
+                    <li><strong>Programming languages:</strong> Python (Advanced), C++ (Proficient), Matlab (Familiar)</li>
+                    <li><strong>Software:</strong> Git, Office Word, LATEX, Markdown, Remote SSH of VSCode</li>
+                    <li><strong>AI-related skills:</strong> Pytorch (Advanced), Transformers (Proficient), LLM (General)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🌟 Scholarships & Honors</h2>
+                <ul class="awards-list">
+                    <li>Merit Student of SEUCC <span class="date">12/2021</span></li>
+                    <li>Excellent cadre of Communist Youth League <span class="date">5/2021</span></li>
+                    <li>Third prize of 1st Innovative Experience and Design Competition at SEUCC <span class="date">12/2020</span></li>
+                    <li>First prize of SEUCC Outstanding Social Practice Team <span class="date">10/2020</span></li>
+                    <li>Social Work Excellence Award at SEUCC <span class="date">12/2020</span></li>
+                    <li>Outstanding Student in Social Practice at SEUCC <span class="date">10/2020</span></li>
+                </ul>
+            </section>            
+
+            <section>
+                <h2>🤝 Extracurricular & Volunteer Activities</h2>
+                <div class="activity-item">
+                    <div class="details">
+                        <h3>Coordination Office of the Organization Department of the School Youth League Committee</h3>
+                        <p>Deputy Director</p>
+                        <p class="date">09/2019 - 06/2020</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>Responsible for the planning of activities and review of party membership materials.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="details">
+                        <h3>Jiangsu Electric Power Research Institute</h3>
+                        <p>Team leaderr</p>
+                        <p class="date">06/2019 - 07/2019</p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>Responsible for travel planning and daily work records.</li>
+                            <li>Learn professional skills and the operation and maintenance of various automation equipment.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <b>Volunteer time: 100h+ ⏳</b>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 YANG LIU. All rights reserved. All original content can be found in the <a href="https://github.com/Carson0706/LKY0824.github.io" target="_blank">website repository</a>.</p>
+            <p>And there is an interesting game written by me: <a href="game.html">Click the Ball Game 🎮</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
